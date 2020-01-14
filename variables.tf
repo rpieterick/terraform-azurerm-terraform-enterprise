@@ -255,6 +255,12 @@ variable "vm_size_tier" {
   default     = "Standard"
 }
 
+variable "vnet_resource_group_name" {
+  type        = "string"
+  description = "An existing Azure Resource Group for the virtual network."
+  default     = ""
+}
+
 variable "weave_cidr" {
   type        = "string"
   description = "Specify a non-standard CIDR range for weave. The default is 10.32.0.0/12"
