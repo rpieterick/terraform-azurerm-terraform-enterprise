@@ -13,12 +13,12 @@ output "public_ip_id" {
   description = "The id of the public ip resource in Azure of this loadbalancer"
 }
 
-output "lb_endpoint_dns" {
-  value       = "${azurerm_dns_a_record.api.name}.${azurerm_dns_a_record.api.zone_name}"
-  description = "The api dns endpoint for this loadbalancer"
-}
+#output "lb_endpoint_dns" {
+#  value       = "${azurerm_dns_a_record.api.name}.${azurerm_dns_a_record.api.zone_name}"
+#  description = "The api dns endpoint for this loadbalancer"
+#}
 
-output "app_endpoint_dns" {
-  value       = "${azurerm_dns_a_record.application.name}.${azurerm_dns_a_record.application.zone_name}"
-  description = "The dns endpoint for this loadbalancer"
-}
+#output "app_endpoint_dns" {
+#  value       = "${azurerm_dns_a_record.application.name}.${azurerm_dns_a_record.application.zone_name}"
+#  description = "The dns endpoint for this loadbalancer"
+#}
