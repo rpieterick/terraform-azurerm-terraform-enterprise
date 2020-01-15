@@ -1,11 +1,11 @@
-resource "azurerm_public_ip" "azlb" {
-  name                = "${local.prefix}-publicIP"
-  location            = "${var.location}"
-  resource_group_name = "${var.rg_name}"
-  allocation_method   = "Static"
-  sku                 = "Standard"
-  tags                = "${local.tags}"
-}
+#resource "azurerm_public_ip" "azlb" {
+#  name                = "${local.prefix}-publicIP"
+#  location            = "${var.location}"
+#  resource_group_name = "${var.rg_name}"
+#  allocation_method   = "Static"
+#  sku                 = "Standard"
+#  tags                = "${local.tags}"
+#}
 
 resource "azurerm_lb" "azlb" {
   name                = "${local.prefix}-lb"
@@ -16,7 +16,7 @@ resource "azurerm_lb" "azlb" {
 
   frontend_ip_configuration {
     name                          = "${local.frontend}"
-    public_ip_address_id          = "${azurerm_public_ip.azlb.id}"
+    #public_ip_address_id          = "${azurerm_public_ip.azlb.id}"
     private_ip_address_allocation = "Dynamic"
   }
 }
