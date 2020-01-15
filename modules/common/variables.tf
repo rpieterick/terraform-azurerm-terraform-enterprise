@@ -15,6 +15,11 @@ variable "vnet_name" {
   description = "The Azure Virtual Network to build into"
 }
 
+variable "vnet_rg_name" {
+  type        = "string"
+  description = "The Azure Resource Group for the virtual network"
+}
+
 variable "subnet_name" {
   type        = "string"
   description = "The Azure Virtual Network Subnet to build into"
