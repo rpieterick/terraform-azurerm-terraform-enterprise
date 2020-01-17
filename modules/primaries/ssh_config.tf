@@ -2,7 +2,8 @@ data "template_file" "ssh_config" {
   template = "${file("${path.module}/templates/ssh_config")}"
 
   vars = {
-    hostname     = "${element(azurerm_public_ip.primary.*.ip_address, 0)}"
+    #hostname     = "${element(azurerm_public_ip.primary.*.ip_address, 0)}"
+    hostname     = "${element(azurerm_network_interface.primary.*.private_ip_address, 0)}"
     ssh_user     = "${var.username}"
     keyfile_path = "${var.ssh["private_key_path"]}"
   }
