@@ -23,10 +23,10 @@ output "installer_dashboard_password" {
   description = "Generated password to unlock the installer dashboard."
 }
 
-output "primary_public_ip" {
-  value       = "${element(module.primaries.public_ips, 0)}"
-  description = "The public IP address of the first primary node created."
-}
+#output "primary_public_ip" {
+#  value       = "${element(module.primaries.public_ips, 0)}"
+#  description = "The public IP address of the first primary node created."
+#}
 
 output "ssh_config_file" {
   value       = "${module.primaries.ssh_config_path}"
