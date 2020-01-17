@@ -1,7 +1,7 @@
-output "public_ips" {
-  value       = "${azurerm_public_ip.primary.*.ip_address}"
-  description = "List of public ips for the nodes."
-}
+#output "public_ips" {
+#  value       = "${azurerm_public_ip.primary.*.ip_address}"
+#  description = "List of public ips for the nodes."
+#}
 
 output "ssh_config_path" {
   value       = "${local.ssh_config_path}"
