@@ -19,6 +19,7 @@ resource "azurerm_lb" "azlb" {
     #public_ip_address_id          = "${azurerm_public_ip.azlb.id}"
     private_ip_address_allocation = "Static"
     private_ip_address            = "${var.lb_static_ip}"
+    subnet_id                     = "${var.subnet_id}"
   }
 }
 
