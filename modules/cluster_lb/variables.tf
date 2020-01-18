@@ -25,6 +25,11 @@ variable "lb_port" {
   description = "Expects map with format `name: [frontend_port, protocol, backend_port]` for all routes."
 }
 
+variable "lb_static_ip" {
+  type        = "string"
+  description = "Static private IP for the load balancer"
+}
+
 variable "resource_prefix" {
   type        = "string"
   description = "Prefix name for resources"
