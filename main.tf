@@ -35,6 +35,7 @@ module "cluster_lb" {
   additional_tags = "${var.additional_tags}"
   hostname        = "${var.hostname}"
   lb_static_ip    = "${var.lb_static_ip}"
+  subnet_id       = "${module.common.app_subnet_id}"
 
   dns = {
     domain  = "${var.domain}"
@@ -149,3 +150,6 @@ module "secondaries" {
     size_tier = "${var.vm_size_tier}"
   }
 }
+
+  
+  
