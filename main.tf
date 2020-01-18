@@ -34,6 +34,7 @@ module "cluster_lb" {
   resource_prefix = "${var.resource_prefix}"
   additional_tags = "${var.additional_tags}"
   hostname        = "${var.hostname}"
+  lb_static_ip    = "${var.lb_static_ip}"
 
   dns = {
     domain  = "${var.domain}"
