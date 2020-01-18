@@ -15,6 +15,11 @@ variable "license_file" {
   description = "Path to the Replicated license file."
 }
 
+variable "lb_static_ip" {
+  type        = "string"
+  description = "Static private IP for the load balancer."
+}
+
 variable "resource_group_name" {
   type        = "string"
   description = "An existing Azure Resource Group to deploy into."
