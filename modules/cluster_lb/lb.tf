@@ -17,7 +17,8 @@ resource "azurerm_lb" "azlb" {
   frontend_ip_configuration {
     name                          = "${local.frontend}"
     #public_ip_address_id          = "${azurerm_public_ip.azlb.id}"
-    private_ip_address_allocation = "Dynamic"
+    private_ip_address_allocation = "Static"
+    private_ip_address            = "${var.lb_static_ip}"
   }
 }
 
