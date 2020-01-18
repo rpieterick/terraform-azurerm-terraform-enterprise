@@ -30,6 +30,11 @@ variable "lb_static_ip" {
   description = "Static private IP for the load balancer"
 }
 
+variable "subnet_id" {
+  type        = "string"
+  description = "Subnet id for the front end IP"
+}
+
 variable "resource_prefix" {
   type        = "string"
   description = "Prefix name for resources"
