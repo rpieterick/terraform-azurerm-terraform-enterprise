@@ -20,5 +20,5 @@ resource "null_resource" "chmod" {
 resource "azurerm_key_vault_secret" "private_key" {
   name         = "${local.prefix}-ssh-private-key"
   key_vault_id = "${data.azurerm_key_vault.selected.id}"
-  value        = "${file(local.private_key_filename)}"
+  value        = "${local_file.private_key_pem.content}"
 }
